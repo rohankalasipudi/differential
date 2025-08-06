@@ -7,6 +7,7 @@ from collections import defaultdict
 nlp = spacy.load("en_core_web_sm")
 
 # Load symptoms data
+@st.cache_data
 def load_symptoms(file_path="symptoms.json"):
     try:
         with open(file_path, 'r') as f:
@@ -41,7 +42,7 @@ def match_symptoms(user_input, symptoms_data):
     
     return matched_symptoms
 
-# Generate differential diagnosis
+# Generate differential diagnosis with qualitative terms
 def generate_differential_diagnosis(matched_symptoms):
     disease_probs = defaultdict(float)
     for symptom in matched_symptoms:
@@ -50,13 +51,26 @@ def generate_differential_diagnosis(matched_symptoms):
     
     # Normalize probabilities
     total = sum(disease_probs.values())
-    if total > 0:
-        for disease in disease_probs:
-            disease_probs[disease] /= total
+    if total == 0:
+        return []
+    
+    for disease in disease_probs:
+        disease_probs[disease] /= total
     
     # Sort diseases by probability
     sorted_diseases = sorted(disease_probs.items(), key=lambda x: x[1], reverse=True)
-    return sorted_diseases
+    
+    # Categorize into Most likely, Likely, Less likely
+    categorized_diseases = {"Most likely": [], "Likely": [], "Less likely": []}
+    for disease, prob in sorted_diseases:
+        if prob >= 0.4:
+            categorized_diseases["Most likely"].append(disease)
+        elif prob >= 0.2:
+            categorized_diseases["Likely"].append(disease)
+        else:
+            categorized_diseases["Less likely"].append(disease)
+    
+    return categorized_diseases
 
 # Determine triage level
 def determine_triage(matched_symptoms):
@@ -101,8 +115,9 @@ def main():
         # Generate differential diagnosis
         differential_diagnosis = generate_differential_diagnosis(matched_symptoms)
         st.subheader("Differential Diagnosis")
-        for disease, prob in differential_diagnosis:
-            st.write(f"- {disease}: {prob:.2%} likelihood")
+        for category, diseases in differential_diagnosis.items():
+            if diseases:  # Only display categories with diseases
+                st.write(f"{category}: {', '.join(diseases)}")
         
         # Determine triage level
         triage = determine_triage(matched_symptoms)
