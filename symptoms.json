@@ -1,0 +1,554 @@
+{
+  "symptoms": [
+    {
+      "symptom": "fever",
+      "synonyms": ["high temperature", "pyrexia", "febrile"],
+      "diseases": [
+        {"name": "Influenza", "probability": 0.7},
+        {"name": "Pneumonia", "probability": 0.5},
+        {"name": "Malaria", "probability": 0.4},
+        {"name": "COVID-19", "probability": 0.6}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "chest pain",
+      "synonyms": ["thoracic pain", "chest discomfort", "angina"],
+      "diseases": [
+        {"name": "Myocardial Infarction", "probability": 0.8},
+        {"name": "Pneumonia", "probability": 0.4},
+        {"name": "Gastroesophageal Reflux Disease", "probability": 0.3},
+        {"name": "Pulmonary Embolism", "probability": 0.6}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "cough",
+      "synonyms": ["coughing", "hacking cough"],
+      "diseases": [
+        {"name": "Influenza", "probability": 0.6},
+        {"name": "Pneumonia", "probability": 0.5},
+        {"name": "Bronchitis", "probability": 0.7},
+        {"name": "Asthma", "probability": 0.4}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "headache",
+      "synonyms": ["migraine", "head pain", "cephalalgia"],
+      "diseases": [
+        {"name": "Tension Headache", "probability": 0.8},
+        {"name": "Meningitis", "probability": 0.3},
+        {"name": "Dehydration", "probability": 0.4},
+        {"name": "Brain Tumor", "probability": 0.1}
+      ],
+      "severity": "low"
+    },
+    {
+      "symptom": "fatigue",
+      "synonyms": ["tiredness", "exhaustion", "lethargy"],
+      "diseases": [
+        {"name": "Chronic Fatigue Syndrome", "probability": 0.6},
+        {"name": "Anemia", "probability": 0.5},
+        {"name": "Hypothyroidism", "probability": 0.4},
+        {"name": "Depression", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "abdominal pain",
+      "synonyms": ["stomach pain", "belly ache", "abdominal discomfort"],
+      "diseases": [
+        {"name": "Appendicitis", "probability": 0.7},
+        {"name": "Gastritis", "probability": 0.5},
+        {"name": "Irritable Bowel Syndrome", "probability": 0.4},
+        {"name": "Pancreatitis", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "shortness of breath",
+      "synonyms": ["dyspnea", "breathlessness"],
+      "diseases": [
+        {"name": "Asthma", "probability": 0.6},
+        {"name": "Pneumonia", "probability": 0.5},
+        {"name": "Heart Failure", "probability": 0.4},
+        {"name": "Chronic Obstructive Pulmonary Disease", "probability": 0.5}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "nausea",
+      "synonyms": ["queasiness", "sickness"],
+      "diseases": [
+        {"name": "Gastroenteritis", "probability": 0.7},
+        {"name": "Migraine", "probability": 0.4},
+        {"name": "Appendicitis", "probability": 0.3},
+        {"name": "Pregnancy", "probability": 0.5}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "dizziness",
+      "synonyms": ["vertigo", "lightheadedness"],
+      "diseases": [
+        {"name": "Benign Paroxysmal Positional Vertigo", "probability": 0.6},
+        {"name": "Dehydration", "probability": 0.5},
+        {"name": "Hypotension", "probability": 0.4},
+        {"name": "Stroke", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "joint pain",
+      "synonyms": ["arthralgia", "joint stiffness"],
+      "diseases": [
+        {"name": "Rheumatoid Arthritis", "probability": 0.6},
+        {"name": "Osteoarthritis", "probability": 0.5},
+        {"name": "Gout", "probability": 0.4},
+        {"name": "Lupus", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "rash",
+      "synonyms": ["skin eruption", "hives"],
+      "diseases": [
+        {"name": "Allergic Reaction", "probability": 0.7},
+        {"name": "Eczema", "probability": 0.5},
+        {"name": "Psoriasis", "probability": 0.4},
+        {"name": "Shingles", "probability": 0.3}
+      ],
+      "severity": "low"
+    },
+    {
+      "symptom": "sore throat",
+      "synonyms": ["throat pain", "pharyngitis"],
+      "diseases": [
+        {"name": "Streptococcal Pharyngitis", "probability": 0.7},
+        {"name": "Influenza", "probability": 0.4},
+        {"name": "Tonsillitis", "probability": 0.5},
+        {"name": "Mononucleosis", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "back pain",
+      "synonyms": ["lumbar pain", "backache"],
+      "diseases": [
+        {"name": "Muscle Strain", "probability": 0.7},
+        {"name": "Herniated Disc", "probability": 0.5},
+        {"name": "Kidney Infection", "probability": 0.3},
+        {"name": "Spinal Stenosis", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "palpitations",
+      "synonyms": ["heart palpitations", "rapid heartbeat"],
+      "diseases": [
+        {"name": "Atrial Fibrillation", "probability": 0.6},
+        {"name": "Anxiety", "probability": 0.5},
+        {"name": "Hyperthyroidism", "probability": 0.4},
+        {"name": "Heart Failure", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "swollen lymph nodes",
+      "synonyms": ["lymphadenopathy", "swollen glands"],
+      "diseases": [
+        {"name": "Infection", "probability": 0.7},
+        {"name": "Lymphoma", "probability": 0.3},
+        {"name": "Mononucleosis", "probability": 0.5},
+        {"name": "Tuberculosis", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "weight loss",
+      "synonyms": ["unintentional weight loss", "wasting"],
+      "diseases": [
+        {"name": "Hyperthyroidism", "probability": 0.6},
+        {"name": "Cancer", "probability": 0.4},
+        {"name": "Diabetes Mellitus", "probability": 0.5},
+        {"name": "Tuberculosis", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "diarrhea",
+      "synonyms": ["loose stools", "watery stools"],
+      "diseases": [
+        {"name": "Gastroenteritis", "probability": 0.7},
+        {"name": "Irritable Bowel Syndrome", "probability": 0.4},
+        {"name": "Crohn's Disease", "probability": 0.3},
+        {"name": "Food Poisoning", "probability": 0.5}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "constipation",
+      "synonyms": ["hard stools", "difficulty passing stools"],
+      "diseases": [
+        {"name": "Irritable Bowel Syndrome", "probability": 0.6},
+        {"name": "Hypothyroidism", "probability": 0.4},
+        {"name": "Colorectal Cancer", "probability": 0.2},
+        {"name": "Dehydration", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "muscle weakness",
+      "synonyms": ["weakness", "muscle fatigue"],
+      "diseases": [
+        {"name": "Myasthenia Gravis", "probability": 0.5},
+        {"name": "Multiple Sclerosis", "probability": 0.4},
+        {"name": "Hypokalemia", "probability": 0.3},
+        {"name": "Stroke", "probability": 0.2}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "vision changes",
+      "synonyms": ["blurred vision", "double vision"],
+      "diseases": [
+        {"name": "Glaucoma", "probability": 0.6},
+        {"name": "Stroke", "probability": 0.4},
+        {"name": "Diabetic Retinopathy", "probability": 0.5},
+        {"name": "Multiple Sclerosis", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "frequent urination",
+      "synonyms": ["polyuria", "urinary frequency"],
+      "diseases": [
+        {"name": "Diabetes Mellitus", "probability": 0.7},
+        {"name": "Urinary Tract Infection", "probability": 0.6},
+        {"name": "Prostate Enlargement", "probability": 0.4},
+        {"name": "Overactive Bladder", "probability": 0.5}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "numbness",
+      "synonyms": ["tingling", "paresthesia"],
+      "diseases": [
+        {"name": "Peripheral Neuropathy", "probability": 0.6},
+        {"name": "Stroke", "probability": 0.4},
+        {"name": "Multiple Sclerosis", "probability": 0.3},
+        {"name": "Vitamin B12 Deficiency", "probability": 0.2}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "sweating",
+      "synonyms": ["perspiration", "diaphoresis"],
+      "diseases": [
+        {"name": "Hyperthyroidism", "probability": 0.5},
+        {"name": "Hypoglycemia", "probability": 0.4},
+        {"name": "Infection", "probability": 0.6},
+        {"name": "Anxiety", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "confusion",
+      "synonyms": ["disorientation", "mental fog"],
+      "diseases": [
+        {"name": "Delirium", "probability": 0.6},
+        {"name": "Stroke", "probability": 0.4},
+        {"name": "Hypoglycemia", "probability": 0.3},
+        {"name": "Dementia", "probability": 0.2}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "skin itching",
+      "synonyms": ["pruritus", "itchy skin"],
+      "diseases": [
+        {"name": "Allergic Reaction", "probability": 0.7},
+        {"name": "Eczema", "probability": 0.5},
+        {"name": "Liver Disease", "probability": 0.3},
+        {"name": "Kidney Failure", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "blood in urine",
+      "synonyms": ["hematuria", "bloody urine"],
+      "diseases": [
+        {"name": "Urinary Tract Infection", "probability": 0.7},
+        {"name": "Kidney Stones", "probability": 0.6},
+        {"name": "Bladder Cancer", "probability": 0.3},
+        {"name": "Kidney Infection", "probability": 0.4}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "difficulty swallowing",
+      "synonyms": ["dysphagia", "swallowing problems"],
+      "diseases": [
+        {"name": "Esophageal Cancer", "probability": 0.4},
+        {"name": "Stroke", "probability": 0.3},
+        {"name": "Gastroesophageal Reflux Disease", "probability": 0.5},
+        {"name": "Achalasia", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "hair loss",
+      "synonyms": ["alopecia", "balding"],
+      "diseases": [
+        {"name": "Alopecia Areata", "probability": 0.6},
+        {"name": "Hypothyroidism", "probability": 0.4},
+        {"name": "Iron Deficiency Anemia", "probability": 0.3},
+        {"name": "Stress", "probability": 0.2}
+      ],
+      "severity": "low"
+    },
+    {
+      "symptom": "tremors",
+      "synonyms": ["shaking", "trembling"],
+      "diseases": [
+        {"name": "Parkinson's Disease", "probability": 0.6},
+        {"name": "Essential Tremor", "probability": 0.5},
+        {"name": "Hyperthyroidism", "probability": 0.3},
+        {"name": "Multiple Sclerosis", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "night sweats",
+      "synonyms": ["nocturnal hyperhidrosis"],
+      "diseases": [
+        {"name": "Tuberculosis", "probability": 0.5},
+        {"name": "Lymphoma", "probability": 0.4},
+        {"name": "Menopause", "probability": 0.6},
+        {"name": "Infection", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "bruising",
+      "synonyms": ["easy bruising", "ecchymosis"],
+      "diseases": [
+        {"name": "Leukemia", "probability": 0.4},
+        {"name": "Vitamin K Deficiency", "probability": 0.3},
+        {"name": "Thrombocytopenia", "probability": 0.5},
+        {"name": "Liver Disease", "probability": 0.2}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "chills",
+      "synonyms": ["shivering", "feeling cold"],
+      "diseases": [
+        {"name": "Influenza", "probability": 0.7},
+        {"name": "Sepsis", "probability": 0.4},
+        {"name": "Malaria", "probability": 0.5},
+        {"name": "Pneumonia", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "hoarseness",
+      "synonyms": ["raspy voice", "voice loss"],
+      "diseases": [
+        {"name": "Laryngitis", "probability": 0.7},
+        {"name": "Thyroid Cancer", "probability": 0.2},
+        {"name": "Vocal Cord Polyps", "probability": 0.4},
+        {"name": "Gastroesophageal Reflux Disease", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "swollen ankles",
+      "synonyms": ["ankle edema", "swollen feet"],
+      "diseases": [
+        {"name": "Heart Failure", "probability": 0.6},
+        {"name": "Kidney Disease", "probability": 0.4},
+        {"name": "Venous Insufficiency", "probability": 0.5},
+        {"name": "Liver Cirrhosis", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "abdominal bloating",
+      "synonyms": ["stomach bloating", "distension"],
+      "diseases": [
+        {"name": "Irritable Bowel Syndrome", "probability": 0.6},
+        {"name": "Ovarian Cancer", "probability": 0.3},
+        {"name": "Gastritis", "probability": 0.4},
+        {"name": "Constipation", "probability": 0.5}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "dry mouth",
+      "synonyms": ["xerostomia", "mouth dryness"],
+      "diseases": [
+        {"name": "Sjogren's Syndrome", "probability": 0.5},
+        {"name": "Dehydration", "probability": 0.6},
+        {"name": "Diabetes Mellitus", "probability": 0.4},
+        {"name": "Medication Side Effect", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "chest tightness",
+      "synonyms": ["chest pressure", "tightness in chest"],
+      "diseases": [
+        {"name": "Angina", "probability": 0.7},
+        {"name": "Asthma", "probability": 0.5},
+        {"name": "Anxiety", "probability": 0.4},
+        {"name": "Pulmonary Embolism", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "fainting",
+      "synonyms": ["syncope", "passing out"],
+      "diseases": [
+        {"name": "Vasovagal Syncope", "probability": 0.6},
+        {"name": "Arrhythmia", "probability": 0.4},
+        {"name": "Hypotension", "probability": 0.5},
+        {"name": "Dehydration", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "ear pain",
+      "synonyms": ["otalgia", "earache"],
+      "diseases": [
+        {"name": "Ear Infection", "probability": 0.7},
+        {"name": "Temporomandibular Joint Disorder", "probability": 0.4},
+        {"name": "Eustachian Tube Dysfunction", "probability": 0.5},
+        {"name": "Mastoiditis", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "nosebleed",
+      "synonyms": ["epistaxis", "nasal bleeding"],
+      "diseases": [
+        {"name": "Hypertension", "probability": 0.5},
+        {"name": "Nasal Trauma", "probability": 0.6},
+        {"name": "Blood Clotting Disorder", "probability": 0.3},
+        {"name": "Allergic Rhinitis", "probability": 0.4}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "wheezing",
+      "synonyms": ["whistling breath", "respiratory noise"],
+      "diseases": [
+        {"name": "Asthma", "probability": 0.7},
+        {"name": "Chronic Obstructive Pulmonary Disease", "probability": 0.5},
+        {"name": "Bronchitis", "probability": 0.4},
+        {"name": "Heart Failure", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "memory loss",
+      "synonyms": ["forgetfulness", "cognitive decline"],
+      "diseases": [
+        {"name": "Alzheimer's Disease", "probability": 0.5},
+        {"name": "Dementia", "probability": 0.4},
+        {"name": "Vitamin B12 Deficiency", "probability": 0.3},
+        {"name": "Depression", "probability": 0.2}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "heartburn",
+      "synonyms": ["acid reflux", "pyrosis"],
+      "diseases": [
+        {"name": "Gastroesophageal Reflux Disease", "probability": 0.7},
+        {"name": "Hiatal Hernia", "probability": 0.4},
+        {"name": "Peptic Ulcer", "probability": 0.3},
+        {"name": "Esophagitis", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "sensitivity to light",
+      "synonyms": ["photophobia", "light sensitivity"],
+      "diseases": [
+        {"name": "Migraine", "probability": 0.7},
+        {"name": "Meningitis", "probability": 0.3},
+        {"name": "Conjunctivitis", "probability": 0.4},
+        {"name": "Glaucoma", "probability": 0.2}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "difficulty breathing",
+      "synonyms": ["respiratory distress", "shortness of breath"],
+      "diseases": [
+        {"name": "Pneumonia", "probability": 0.6},
+        {"name": "Asthma", "probability": 0.5},
+        {"name": "Pulmonary Embolism", "probability": 0.4},
+        {"name": "Heart Failure", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "abdominal cramps",
+      "synonyms": ["stomach cramps", "gut pain"],
+      "diseases": [
+        {"name": "Irritable Bowel Syndrome", "probability": 0.6},
+        {"name": "Gastroenteritis", "probability": 0.5},
+        {"name": "Menstrual Cramps", "probability": 0.4},
+        {"name": "Appendicitis", "probability": 0.3}
+      ],
+      "severity": "moderate"
+    },
+    {
+      "symptom": "stiff neck",
+      "synonyms": ["neck rigidity", "neck stiffness"],
+      "diseases": [
+        {"name": "Meningitis", "probability": 0.6},
+        {"name": "Muscle Strain", "probability": 0.5},
+        {"name": "Cervical Spondylosis", "probability": 0.4},
+        {"name": "Torticollis", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "blood in stool",
+      "synonyms": ["rectal bleeding", "hematochezia"],
+      "diseases": [
+        {"name": "Hemorrhoids", "probability": 0.7},
+        {"name": "Colorectal Cancer", "probability": 0.3},
+        {"name": "Ulcerative Colitis", "probability": 0.4},
+        {"name": "Diverticulitis", "probability": 0.3}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "cough with blood",
+      "synonyms": ["hemoptysis", "bloody cough"],
+      "diseases": [
+        {"name": "Tuberculosis", "probability": 0.6},
+        {"name": "Lung Cancer", "probability": 0.4},
+        {"name": "Pneumonia", "probability": 0.3},
+        {"name": "Pulmonary Embolism", "probability": 0.2}
+      ],
+      "severity": "high"
+    },
+    {
+      "symptom": "irregular heartbeat",
+      "synonyms": ["arrhythmia", "palpitations"],
+      "diseases": [
+        {"name": "Atrial Fibrillation", "probability": 0.7},
+        {"name": "Heart Failure", "probability": 0.4},
+        {"name": "Hyperthyroidism", "probability": 0.3},
+        {"name": "Electrolyte Imbalance", "probability": 0.2}
+      ],
+      "severity": "high"
+    }
+  ]
+}
